@@ -1,58 +1,498 @@
-{% extends "base.html" %}
-{% load staticfiles %}
+<html oncontextmenu="return false" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-{% block content %}
+<meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+<meta content="max-age=0" http-equiv="cache-control">
+<meta content="0" http-equiv="expires">
+<meta content="Tue, 01 Jan 1980 1:00:00 GMT" http-equiv="expires">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="Arabic" name="language">
+<meta content="ar" itemprop="inLanguage">
+<meta content="Y4CaqahOvczPPZhgEl6X2zh2mT0" name="alexaVerifyID">
+<meta name="google-site-verification" content="hNxOXoVpVH1tjbKhNTzbA9mH-RPl-OuuhOLSSSMwarQ">
+<meta content="349ce06d13f71d4bac4f" name="wot-verification">
+<meta content="Cool Kora" name="author">
+<meta content="Cool Kora" name="owner">
+<meta content="(c) 2015" name="copyright">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="{% static 'lang-logo.png'%}">
-    </a>
-    <h1>Getting Started with Python on Heroku</h1>
-    <p>This is a sample Python application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-python"><span class="glyphicon glyphicon-flash"></span> Getting Started with Python</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/python-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
-</div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-python" class="alert-link">Getting Started with Python on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/python-getting-started">Heroku Button</a> on the repository.</li>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <li>When Heroku received the source code, it fetched all the dependencies in the <a href="https://github.com/heroku/python-getting-started/blob/master/Pipfile">Pipfile</a>, creating a deployable slug.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
-      <ul>
-        <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started</a> guide, then please head back to the tutorial and follow the next steps!</li>
-        <li>If you deployed this app by deploying the Heroku Button, then in a command line shell, run:</li>
-        <ul>
-          <li><code>git clone https://github.com/heroku/python-getting-started.git</code> - this will create a local copy of the source code for the app</li>
-          <li><code>cd python-getting-started</code> - change directory into the local source code repository</li>
-          <li><code>heroku git:remote -a &lt;your-app-name></code> - associate the Heroku app with the repository</li>
-          <li>You'll now be set up to run the app locally, or <a href="https://devcenter.heroku.com/articles/getting-started-with-python#push-local-changes">deploy changes</a> to Heroku</li>
-        </ul>
-      </ul>
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started with Python on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/django-app-configuration">Configuring Django Apps for Heroku</a></li>
-      </ul>
-    </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
-  </div>
-</div>
-{% endblock %}
+<style>   
+		
+#rabak{display:none;}
+body{
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background-color: #fff;
+}
+img{border:0;}
+table {
+    width: 100%;
+    text-align: center;
+    font-family: arial;
+    font-size: 14px;
+    color: #000;
+}
+tr, td {
+    padding: 1px 1px;
+}
+.headline {
+    border-bottom: 4px solid #fc3931;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    height: 35px;
+}
+.league {
+    padding: 0px;
+    /*border-bottom: 4px solid #CC0000;*/
+    background-color: black;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.team_logo1{}
+.team_logo2{}
+table.time_table {
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;
+    direction: ltr;
+}
+table.channels_table {
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+.channels{}
+.team_name1 {
+    background-color: #4CAF50;
+    color: #fff;
+}
+.team_name2 {
+    background-color: #4CAF50;
+    color: #fff;
+}
+.time_style {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d43505+0,bf0303+50,a90329+100 */
+    background:  #4CAF50; /* Old browsers */
+    background: -moz-linear-gradient(top,   #4CAF50 0%,  #4CAF50 50%,  #4CAF50 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,   #4CAF50 0%, #4CAF50 50%, #4CAF50 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,   #4CAF50 0%, #4CAF50 50%, #4CAF50 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d43505', endColorstr='#d43505',GradientType=0 ); /* IE6-9 */
+    height: 25px;
+    display: inline-block;
+    color: #fff;
+    padding: 0 5px;
+}
+.local_12h{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d43505+0,bf0303+50,a90329+100 */
+    background: #d43505; /* Old browsers */
+    background: -moz-linear-gradient(top,  #d43505 0%, #bf0303 50%, #d43505 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #d43505 0%,#bf0303 50%,#d43505 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #d43505 0%,#bf0303 50%,#d43505 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d43505', endColorstr='#d43505',GradientType=0 ); /* IE6-9 */
+    height: 25px;
+    display: inline-block;
+    color: #fff;
+    padding: 0 5px;
+}
+.title {
+    width: 40%;
+}
+.date{
+    height: 10px;
+    border-left: 3px solid;
+    border-top: 5px solid;
+    background-color: #333;
+    font-size: 13px;
+    width: 30%;
+}
+.GMT {
+    height: 10px;
+    border-right: 3px solid;
+    border-top: 5px solid;
+    background-color: #333;
+    font-size: 13px;
+    width: 30%;
+}
+.title:before {
+    content: "\f1e3";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.title:after {
+    content: "\f0dd";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #fc3931;
+    font-size: 18px;
+    position: absolute;
+    top: 29px;
+    right: 50%;
+}
+.watch {
+    font-size: 18px;
+    font-weight: bold;
+    color: #A00000;
+    display:none;
+}
+.watch:before {
+    content: "\f144";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #C00;
+    font-size: 18px;
+    margin-left: 5px;
+}
+.team_l img{height: 40px;}
+.team_names {
+    font-weight: bold;
+    border-bottom: 3px solid #fc3931;
+}
+.head_line {
+    vertical-align: middle;
+}
+.t_vs img {
+/*    width: 25px;*/
+    height: 25px;
+    vertical-align: middle;
+    float: left;
+}
+table.league_table {
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.channel_img img {
+    max-width: 100px;
+    width: 100%;
+}
+.channel_img b {
+    background-color: #C00;
+    color: #fff;
+    padding: 0px 10px;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+        </style>
+</head>
+<body>
+
+
+
+
+
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<!-- hna bdat -->
+<input type="text" id="rabak" value="{{wdb}}">
+<table id="herebro">
+</table>
+<script>
+var ab=document.getElementById("rabak").value  ;
+document.getElementById("herebro").innerHTML+=ab;
+</script>
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<!-- hna lakhar ddkachy -->
+<script>
+
+
+<!-- var links= document.getElementsByTagName('a'); -->
+<!-- for (var i=0; i<links.length; i++){links[i].setAttribute('target', '_top');} -->
+
+if (typeof document.getElementsByClassName !== 'function') {
+function getElementsByClassName(node, classname) {
+    var a = [];
+    var re = new RegExp('(^| )'+classname+'( |$)');
+    var els = node.getElementsByTagName("*");
+    for(var i=0,j=els.length; i<j; i++)
+        if(re.test(els[i].className))a.push(els[i]);
+    return a;
+}
+
+var GMT = getElementsByClassName(document.body,'time_style');  // no document
+
+}
+else
+{
+        var GMT = document.getElementsByClassName("time_style");
+}
+
+
+
+for (i = 0; i < GMT.length; i++) {
+
+if(typeof GMT[i].innerText === "undefined"){
+var time_p = GMT[i].innerHTML.replace(/<\/?p[^>]*>/g,"");
+var time_enter = time_p.replace(/(?:\r\n|\r|\n)/g, "");
+var time_span = time_enter.replace(/<\/?span[^>]*>/g,"");
+var time = time_span.replace(/<\/?p[^>]*>/g,"");
+}
+else
+{
+var time = GMT[i].innerText.replace(/(?:\r\n|\r|\n)/g, "");
+}
+//    if (typeof document.getElementsByClassName !== 'function') {
+//        var strDateTime = "Tue Oct 15 2015 "+time+":00 GMT";
+//    }
+//    else
+//    {
+//        var strDateTime = "Fri, 15 Oct 2015 "+time+":00 GMT";
+//    }
+
+        var strDateTime = "Fri, 15 Oct 2015 "+time+":00 GMT";
+
+
+var myDate = new Date(strDateTime);
+//var GMT_to_Local= myDate.toLocaleString();
+
+function formatAMPM(date) {
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = hours + ':' + minutes + ' ' + ampm;
+  return strTime;
+}
+
+var GMT_to_Local = formatAMPM(myDate);
+
+var regex = /([01]?[0-9]|2[0-3]):[0-5][0-9]/;
+var local_time = GMT_to_Local.match(regex);
+var regex2 = /PM|AM/i;
+var local_12h = GMT_to_Local.match(regex2);
+
+    if (typeof document.getElementsByClassName !== 'function') {
+    getElementsByClassName(document.body,'time_style')[i].innerText = local_time[0];
+    getElementsByClassName(document.body,'local_12h')[i].innerText = local_12h[0];
+    }
+    else
+    {
+    document.getElementsByClassName("time_style")[i].innerHTML = local_time[0];
+    document.getElementsByClassName("local_12h")[i].innerHTML = local_12h[0];
+    }
+
+}
+
+// change all url to add analytics
+var anchors = document.getElementsByTagName("a");
+
+for (var i = 0; i < anchors.length; i++) {
+	 var linkabb=anchors[i].href;
+	 var num1 = linkabb.search("hd1");
+	 var num2 = linkabb.search("hd2");
+	 var num3 = linkabb.search("hd3");
+	 var num4 = linkabb.search("hd4");
+	 var num5 = linkabb.search("hd5");
+	 var num6 = linkabb.search("hd6");
+	 var num7 = linkabb.search("hd7");
+	 var num8 = linkabb.search("hd8");
+	 var num9 = linkabb.search("hd9");
+	 var num10 = linkabb.search("hd10");
+	 var num11 = linkabb.search("1-max");
+	 var num12 = linkabb.search("2-max");
+	 var num13 = linkabb.search("3-max");
+	 var num14 = linkabb.search("4-max");
+	 if (num1<1 && num2<1 && num3<1 && num4<1 && num5<1 && num6<1 && num7<1 && num8<1 && num9<1 && num10<1 && num11<1 && num12<1)
+	 {
+	 
+	 
+	 anchors[i].href ="https://www.100kora.com/2019/07/channels.html";
+	 
+	 
+	 } 
+	 if(num1>1){ anchors[i].href = "https://www.100kora.com/2019/07/1-bein-sport-hd1-kora-extra-live-online.html" ;} 
+	 if(num2>1){ anchors[i].href = "https://www.100kora.com/2019/07/2-bein-sport-hd2-kora-extra-live-online.html" ;} 
+	 if(num3>1){ anchors[i].href = "https://www.100kora.com/2019/07/3-bein-sport-hd3-kora-extra-live-online.html" ;} 
+	 if(num4>1){ anchors[i].href = "https://www.100kora.com/2019/07/4-bein-sport-hd4-kora-extra-live-online.html" ;} 
+	 if(num5>1){ anchors[i].href = "https://www.100kora.com/2019/07/5-bein-sport-hd5-kora-extra-live-online.html" ;} 
+	 if(num6>1){ anchors[i].href = "https://www.100kora.com/2019/07/6-bein-sport-hd6-kora-extra-live-online.html" ;} 
+	 if(num7>1){ anchors[i].href = "https://www.100kora.com/2019/07/7-bein-sport-hd7-kora-extra-live-online.html" ;} 
+	 if(num8>1){ anchors[i].href = "https://www.100kora.com/2019/07/8-bein-sport-hd8-kora-extra-live-online.html" ;} 
+	 if(num9>1){ anchors[i].href = "https://www.100kora.com/2019/07/9-bein-sport-hd9-kora-extra-live-online.html" ;} 
+	 if(num10>1){ anchors[i].href = "https://www.100kora.com/2019/07/10-bein-sport-hd10-kora-extra-live-online.html" ;} 
+	 if(num11>1){ anchors[i].href = "https://www.100kora.com/2019/07/1-bein-sport-max-hd1-kora-extra-live-online.html" ;}
+	 if(num12>1){ anchors[i].href = "https://www.100kora.com/2019/07/2-bein-sport-max-hd2-kora-extra-live-online.html" ;}
+	 if(num13>1){ anchors[i].href = "https://www.100kora.com/2019/07/3-bein-sport-max-hd3-kora-extra-live-online.html" ;}
+	 if(num14>1){ anchors[i].href = "https://www.100kora.com/2019/07/4-bein-sport-max-hd4-kora-extra-live-online.html" ;}
+     
+	      
+}
+
+//Hide GMT td
+if(-(new Date().getTimezoneOffset() / 60) > 0){gmt_number="+" + -(new Date().getTimezoneOffset() / 60) + " GMT";}else{gmt_number= -(new Date().getTimezoneOffset() / 60) + " GMT";}
+    if (typeof document.getElementsByClassName !== 'function') {
+    getElementsByClassName(document.body,'GMT')[0].innerText = gmt_number;
+    }else{
+    document.getElementsByClassName("GMT")[0]. innerHTML = gmt_number;
+    }
+
+
+// channel links all over
+
+var table = document.getElementsByClassName("schedule");
+var rows = table[0].getElementsByTagName("tr");
+
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
+for (i = 0; i < rows.length; i++) {
+        var currentRow = rows[i];
+
+
+
+    var is_team_name_row = hasClass(currentRow, 'team_names');
+    if (is_team_name_row === true){
+        var href = rows[i-1];
+        if(href.getElementsByTagName("a").length > 1){
+
+        } else {
+
+            var channel_url = href.getElementsByTagName("a")[0].getAttribute("href");
+
+//                if(window.top.location.hostname === 'flive.club'||
+//                   window.top.location.hostname === 'www.flive.club'||
+//                   window.top.location.hostname === 'today.flive.club'||
+//                   window.top.location.hostname === 'ar.flive.club'||
+//                   window.top.location.hostname === 'cast.flive.club'||
+//                   window.top.location.hostname === 'video.flive.club'
+//                   ){
+
+                    // open top window
+
+//                    rows[i].setAttribute("onClick", "window.parent.location.href='"+ channel_url +"'");
+//                    rows[i-1].setAttribute("onClick", "window.parent.location.href='"+ channel_url +"'");
+//                    rows[i-2].setAttribute("onClick", "window.parent.location.href='"+ channel_url +"'");
+//                    rows[i-3].setAttribute("onClick", "window.parent.location.href='"+ channel_url +"'");
+//                    rows[i-4].setAttribute("onClick", "window.parent.location.href='"+ channel_url +"'");
+//                    rows[i-5].setAttribute("onClick", "window.parent.location.href='"+ channel_url +"'");
+
+//                } else {
+
+                    // open new window
+
+                    rows[i].setAttribute("onClick", "window.open=('"+ channel_url +"', '_blank')");
+                    rows[i-1].setAttribute("onClick", "window.open('"+ channel_url +"', '_blank')");
+                    rows[i-2].setAttribute("onClick", "window.open('"+ channel_url +"', '_blank')");
+                    rows[i-3].setAttribute("onClick", "window.open('"+ channel_url +"', '_blank')");
+                    rows[i-4].setAttribute("onClick", "window.open('"+ channel_url +"', '_blank')");
+                    rows[i-5].setAttribute("onClick", "window.open('"+ channel_url +"', '_blank')");
+//                }
+
+            rows[i].setAttribute("style", "cursor: pointer;");
+            rows[i-1].setAttribute("style", "cursor: pointer;");
+            rows[i-2].setAttribute("style", "cursor: pointer;");
+            rows[i-3].setAttribute("style", "cursor: pointer;");
+            rows[i-4].setAttribute("style", "cursor: pointer;");
+            rows[i-5].setAttribute("style", "cursor: pointer;");
+        }
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
